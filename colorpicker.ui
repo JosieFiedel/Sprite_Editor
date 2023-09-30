@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ColorPicker</class>
+ <widget class="QWidget" name="ColorPicker">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>506</width>
+    <height>330</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QFrame" name="colorPicker">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>211</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0.5, x2:0, y2:0.5, stop:0 rgba(191, 191, 191, 255), stop:1 rgba(228, 228, 228, 255));
+border-width: 2;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+padding: -2px;
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="gradientBackground">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>161</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, 
+stop:0 rgba(255, 0, 0, 255), 
+stop:0.45 rgba(255, 0, 0, 255),
+stop:1 rgba(255, 255, 255, 255));</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gradientForeground">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>161</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.493909, y1:1, x2:0.488636, y2:0, 
+stop:0 rgba(0, 0, 0, 255), 
+stop:1 rgba(255, 255, 255, 0));</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="gradientHueSlider">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>10</y>
+      <width>16</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::vertical {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.483, x2:0, y2:0, stop:0 rgba(0, 0, 0, 255), 	stop:1 rgba(255, 255, 255, 255));
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, 
+	stop:0 rgb(255, 0, 0),
+	stop:0.042 rgb(255, 64, 0),
+	stop:0.083 rgb(255, 128, 0),
+	stop:0.125 rgb(255, 191, 0),
+	stop: 0.167 rgb(255, 255, 0),
+	stop: 0.208 rgb(191, 255, 0),
+	stop: 0.250 rgb(128, 255, 0),
+	stop: 0.292 rgb(64, 255, 0),
+	stop: 0.333 rgb(0, 255, 0),
+	stop: 0.375 rgb(0, 255, 64),
+	stop: 0.417 rgb(0, 255, 128),
+	stop: 0.458 rgb(0, 255, 191),
+	stop: 0.500 rgb(0, 255, 255),
+	stop: 0.542 rgb(0, 191, 255),
+	stop: 0.583 rgb(0, 128, 255),
+	stop: 0.625 rgb(0, 64, 255), 
+	stop: 0.667 rgb(0, 0, 255),
+	stop: 0.708 rgb(64, 0, 255),
+	stop: 0.750 rgb(128, 0, 255),
+	stop: 0.792 rgb(191, 0, 255),
+	stop: 0.833 rgb(255, 0, 255),
+	stop: 0.875 rgb(255, 0, 191),
+	stop: 0.917 rgb(255, 0, 128),
+	stop:0.958 rgb(255, 0, 64),
+	stop:1 rgb(255, 0, 0));
+
+	border-style: outset;
+	border-width: 2px;
+   border-radius: 10px;
+   border-color: black;
+   padding: 6px;
+}
+
+QSlider::groove:vertical {
+	border: 1px solid #ffffff;
+}
+
+QSlider::handle:vertical {
+	background: black;
+   width: 28px;
+    height: 6px;
+    border-radius: 4px;
+	margin: 0px -8;
+}</string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>359</number>
+    </property>
+    <property name="tracking">
+     <bool>true</bool>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <property name="invertedAppearance">
+     <bool>true</bool>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::NoTicks</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="selectionLayer">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>181</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+border: 0px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pointerLayer">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>161</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+border: 0px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="recentColors">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>179</y>
+     <width>211</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:0.5, x2:0, y2:0.5, stop:0 rgba(191, 191, 191, 255), stop:1 rgba(228, 228, 228, 255));
+border-width: 2;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+padding: -2px;
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>211</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="recentColorsLayout">
+     <property name="spacing">
+      <number>9</number>
+     </property>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="color1">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+border-width: 2;
+border-radius: 5;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+padding: -2px;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="color2">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+border-radius: 5;
+border-width: 2;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+padding: -2px;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="color3">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+border-radius: 5;
+border-width: 2;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+padding: -2px;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="color4">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+border-radius: 5;
+border-width: 2;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+padding: -2px;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="color5">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+border-radius: 5;
+border-width: 2;
+border-style: solid;
+border-color: rgb(0, 0, 0);
+padding: -2px;
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <zorder>recentColors</zorder>
+  <zorder>colorPicker</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
